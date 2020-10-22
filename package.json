@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/ZVernam/crypt/issues"
   },
-  "homepage": "https://github.com/ZVernam/crypt#readme"
+  "homepage": "https://github.com/ZVernam/crypt#readme",
+  "dependencies": {
+    "crypto-js": "4.0.0"
+  }
 }
