@@ -1,7 +1,4 @@
-import Base64 from 'crypto-js/enc-base64';
-import utf8 from 'crypto-js/enc-utf8';
-
-import './crypt';
+import {encrypt} from './crypt';
 
 const plainTextElement = document.querySelector(`#text`);
 const secretTextElement = document.querySelector(`#secret`);
@@ -18,6 +15,11 @@ const onInputChange = () => {
 plainTextElement.addEventListener(`input`, onInputChange);
 secretTextElement.addEventListener(`input`, onInputChange);
 
-onInputChange();
+encryptButton.addEventListener(`click`, (evt) => {
+  evt.stopPropagation();
+  evt.preventDefault();
 
-console.log(Base64.stringify(utf8.parse(`Hello, crypto-js!`)));
+  cipherTextElement.value = encrypt(plainTextElement.value, secretTextElement.value);
+});
+
+onInputChange();
