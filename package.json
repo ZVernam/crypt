@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "webpack": "webpack ./src/index.js -o dist",
+    "webpack": "webpack ./src/index.js -o dist --devtool inline-source-map",
     "build": "npm run webpack"
   },
   "repository": {
