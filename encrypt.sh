@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-echo -n "$@" | # input text
+echo "$@" | # input text
  openssl enc \
   -e `# encode` \
   -aes-256-cbc `# ciphername` \
