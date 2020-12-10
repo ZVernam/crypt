@@ -1,4 +1,4 @@
-# crypt
+# crypton
 Encrypt/decrypt whatever online without SMS and registration
 
 #### OpenSSL encrypt/decrypt

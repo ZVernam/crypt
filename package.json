@@ -1,7 +1,7 @@
 {
-  "name": "crypt",
+  "name": "crypton",
   "version": "1.0.0",
-  "description": "Crypto tools for online encrypt/decrypt operations",
+  "description": "Tool for online encrypt/decrypt operations compatible with OpenSSL",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
