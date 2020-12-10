@@ -22,16 +22,12 @@ console.log(ciphertext);
 
 // Decrypt
 {
-  const bytes = decrypt(ciphertext, KEY);
-  const originalText = bytes.toString(utf8);
-  console.log(originalText);
+  console.log(decrypt(ciphertext, KEY));
 }
 
 {
   const encrypted = `U2FsdGVkX19sIcAZ7HYDN1YP8yqbI5Q5Xu/85mA9aRhmrmkYtY2S1kvnetSI5hru`;
-  const bytes = decrypt(encrypted, KEY);
-  const originalText = bytes.toString(utf8);
-  console.log(originalText);
+  console.log(decrypt(encrypted, KEY));
 }
 
 // Parse/stringify example
