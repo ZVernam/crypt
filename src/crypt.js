@@ -21,7 +21,16 @@ const ciphertext = cipher.toString();
 console.log(ciphertext);
 
 // Decrypt
-const bytes  = aesCipher.decrypt(ciphertext, KEY);
-const originalText = bytes.toString(utf8);
+{
+  const bytes = aesCipher.decrypt(ciphertext, KEY);
+  const originalText = bytes.toString(utf8);
+  console.log(originalText);
+}
 
-console.log(originalText);
+{
+  const encrypted = `U2FsdGVkX19sIcAZ7HYDN1YP8yqbI5Q5Xu/85mA9aRhmrmkYtY2S1kvnetSI5hru`;
+  const bytes = aesCipher.decrypt(encrypted, KEY);
+  const originalText = bytes.toString(utf8);
+  console.log(originalText);
+}
+
