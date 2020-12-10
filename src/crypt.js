@@ -3,9 +3,10 @@ import aesCipher from 'crypto-js/aes';
 
 /*
  * AES Cipher defaults:
- * Cipher: AES-256-cbc
+ *
+ * Cipher: AES-256-CBC
  * Salt: Random and packed to response
- * Key, IV: Derived from password (See https://www.openssl.org/docs/manmaster/man3/EVP_BytesToKey.html)
+ * Key, IV: Derived from password and salt (See https://www.openssl.org/docs/manmaster/man3/EVP_BytesToKey.html)
  * Output: base64 string with OpenSSL salted format (See http://justsolve.archiveteam.org/wiki/OpenSSL_salted_format)
  */
 
