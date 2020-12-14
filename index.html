@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Crypton &mdash; is an encrypt/decrypt Tool</title>
+  <script src="main.js" type="module"></script>
+  <style>
+    body {
+      font-size: 3em;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      padding: 30px 30px;
+    }
+
+    button, textarea, input {
+      border-color: grey;
+      border-style: solid;
+      border-width: 2px;
+      border-radius: 5px;
+    }
+
+    textarea, input {
+      font-size: 1em;
+    }
+
+    textarea {
+      min-height: 10em;
+    }
+
+    input {
+      width: 99%;
+    }
+
+    button {
+      font-size: 2em;
+    }
+
+    fieldset {
+      border: none;
+      padding: 2px;
+      margin-bottom: 20px;
+      display: flex;
+      flex-direction: column;
+    }
+
+  </style>
+</head>
+
+<body>
+<form>
+  <fieldset>
+    <label for="text">Plain Text:</label>
+    <textarea id="text"></textarea>
+  </fieldset>
+  <fieldset>
+    <label for="secret">Password:</label>
+    <input id="secret" placeholder="secret" type="password"/>
+  </fieldset>
+  <fieldset>
+    <label for="cipher">Encrypted Text:</label>
+    <textarea id="cipher"></textarea>
+  </fieldset>
+  <button id="encrypt" type="submit">Encrypt</button>
+</form>
+
+</body>
+</html>
