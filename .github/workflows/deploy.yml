@@ -9,7 +9,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - name: Use Node.js
+
+      - name: Setup and build with Node.js
         uses: actions/setup-node@v1
         with:
           node-version: '12.x'
@@ -18,3 +19,9 @@ jobs:
       - run: npm test
         env:
           CI: true
+
+      - name: Deploy to gh-pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
