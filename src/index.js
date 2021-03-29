@@ -1,25 +1,6 @@
-import {encrypt} from './crypt';
+import './encrypt';
 
-const plainTextElement = document.querySelector(`#text`);
-const secretTextElement = document.querySelector(`#secret`);
-const cipherTextElement = document.querySelector(`#cipher`);
+const action = document.querySelector(`.action`);
+action.addEventListener(`input`, () => {
 
-const encryptButton = document.querySelector(`#encrypt`);
-
-const onInputChange = () => {
-  const plaintText = plainTextElement.value;
-  const secretText = secretTextElement.value;
-  encryptButton.disabled = !(plaintText && secretText);
-};
-
-plainTextElement.addEventListener(`input`, onInputChange);
-secretTextElement.addEventListener(`input`, onInputChange);
-
-encryptButton.addEventListener(`click`, (evt) => {
-  evt.stopPropagation();
-  evt.preventDefault();
-
-  cipherTextElement.value = encrypt(plainTextElement.value, secretTextElement.value);
-});
-
-onInputChange();
+})
