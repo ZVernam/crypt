@@ -17,7 +17,7 @@
       padding: 30px 30px;
     }
 
-    button, textarea, input {
+    button, textarea, input, .action {
       border-color: grey;
       border-style: solid;
       border-width: 2px;
@@ -32,7 +32,7 @@
       min-height: 10em;
     }
 
-    input {
+    input[type=text] {
       width: 99%;
     }
 
@@ -48,10 +48,38 @@
       flex-direction: column;
     }
 
+    .horizontal {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .action {
+      position: relative;
+    }
+
+    .action input {
+      visibility: hidden;
+      position: absolute;
+    }
+
+    .hidden {
+      display: none;
+    }
+
   </style>
 </head>
 
 <body>
+<form>
+  <fieldset class="horizontal">
+    <label class="action">
+      <input type="radio" name="action" checked>Encrypt
+    </label>
+    <label class="action">
+      <input type="radio" name="action">Decrypt
+    </label>
+  </fieldset>
+</form>
 <form>
   <fieldset>
     <label for="text">Plain Text:</label>
